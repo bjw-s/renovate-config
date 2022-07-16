@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    ":disableRateLimiting",
+    "docker:enableMajor",
+    ":automergeDigest",
+    ":enablePreCommit",
+    "github>bjw-s/renovate-config:commit-message",
+    "github>bjw-s/renovate-config:pr-labels",
+    "github>bjw-s/renovate-config:semantic-commits"
+  ],
+  "onboarding": false,
+  "requireConfig": "optional",
+  "timezone": "Europe/Amsterdam",
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "suppressNotifications": ["prIgnoreNotification"],
+  "commitBodyTable": true,
+  "rebaseWhen": "conflicted"
+}

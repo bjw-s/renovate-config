@@ -1,4 +1,7 @@
 {
+  "extends": [
+    ":semanticCommits"
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
