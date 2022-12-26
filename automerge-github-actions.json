@@ -5,7 +5,6 @@
       "matchManagers": ["github-actions"],
       "automerge": true,
       "automergeType": "branch",
-      "requiredStatusChecks": null,
       "matchUpdateTypes": ["minor", "patch"],
       "ignoreTests": true
     }
