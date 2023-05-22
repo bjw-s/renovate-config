@@ -2,10 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "regexManagers": [
     {
-      "description": ["Process various dependencies in YAML files"],
-      "fileMatch": [".+\\.ya?ml$"],
+      "description": "Process various dependencies in files",
+      "fileMatch": [".+\\.ya?ml$", "Dockerfile$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*=?))?( versionTemplate=(?<versionTemplate>.*=?))?\\n.*: ?(\"?(?<currentValue>[^\"\\n]+=?)\"?)"
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*=?))?( versionTemplate=(?<versionTemplate>.*=?))?\\n.*(:|=) ?(\"?(?<currentValue>[^\"\\n]+=?)\"?)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "extractVersionTemplate": "{{#if versionTemplate}}{{{versionTemplate}}}{{else}}{{/if}}"
