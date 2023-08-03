@@ -1,0 +1,20 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  regexManagers: [
+    {
+      description: "Process various dependencies in YAML files",
+      fileMatch: [".+\\.ya?ml$"],
+      matchStrings: [
+        // Inline comment
+        '.*?[:] ("?(?<currentValue>.+?)"?) # renovate: depName=(?<depName>.*?)( datasource=(?<datasource>.*?))?( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?$',
+        // Newline comment
+        '^ *?# renovate: depName=(?<depName>.*?)( datasource=(?<datasource>.*?))?( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\n *[a-zA-Z0-9_"]+: ("?(?<currentValue>.*?)"?)$',
+        // Old style newline comment
+        '^ *?# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( versionTemplate=(?<extractVersion>.*?))?\n *[a-zA-Z0-9_"]+: ("?(?<currentValue>.*?)"?)$',
+      ],
+      datasourceTemplate: "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
+      versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      extractVersionTemplate: "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.*)${{/if}}",
+    },
+  ],
+}
