@@ -3,14 +3,14 @@
   regexManagers: [
     {
       description: "Process various dependencies in YAML files",
-      fileMatch: [".+\\.ya?ml$"],
+      fileMatch: ["\\.ya?ml$"],
       matchStrings: [
-        // Inline comment
-        '.*?[:] ("?(?<currentValue>.+?)"?) # renovate: depName=(?<depName>.*?)( datasource=(?<datasource>.*?))?( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?$',
-        // Newline comment
-        '^ *?# renovate: depName=(?<depName>.*?)( datasource=(?<datasource>.*?))?( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\n *[a-zA-Z0-9_"]+: ("?(?<currentValue>.*?)"?)$',
-        // Old style newline comment
-        '^ *?# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( versionTemplate=(?<extractVersion>.*?))?\n *[a-zA-Z0-9_"]+: ("?(?<currentValue>.*?)"?)$',
+        // Inline
+        '\\S+: "?(?<currentValue>[^"\\s]+)"? # ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?',
+        // Newline
+        '(?m:^\\s+# ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?\\n[ \\t ]*? \\S+: "?(?<currentValue>[^" ]+)"?$)',
+        // Old style newline
+        '(?m:^\\s+# ?renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?( versionTemplate=(?<extractVersion>\\S+))?\\n[ \\t ]*? \\S+: "?(?<currentValue>[^" ]+)"?$)'
       ],
       datasourceTemplate: "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
       versioningTemplate: "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
