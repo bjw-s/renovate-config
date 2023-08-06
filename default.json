@@ -5,7 +5,6 @@
     ":dependencyDashboard",
     ":disableRateLimiting",
     "docker:enableMajor",
-    "docker:pinDigests",
     ":automergeDigest",
     ":enablePreCommit",
     "github>bjw-s/renovate-config:commit-message",
