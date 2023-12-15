@@ -13,10 +13,10 @@
     "github>bjw-s/renovate-config:generic-regex-manager.json5"
   ],
   "onboarding": false,
-  "requireConfig": "optional",
   "timezone": "Europe/Amsterdam",
   "dependencyDashboardTitle": "Renovate Dashboard",
   "suppressNotifications": ["prIgnoreNotification"],
   "commitBodyTable": true,
-  "rebaseWhen": "conflicted"
+  "rebaseWhen": "conflicted",
+  "platformCommit": true
 }
