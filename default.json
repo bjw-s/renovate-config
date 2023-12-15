@@ -12,7 +12,6 @@
     "github>bjw-s/renovate-config:semantic-commits",
     "github>bjw-s/renovate-config:generic-regex-manager.json5"
   ],
-  "onboarding": false,
   "timezone": "Europe/Amsterdam",
   "dependencyDashboardTitle": "Renovate Dashboard",
   "suppressNotifications": ["prIgnoreNotification"],
