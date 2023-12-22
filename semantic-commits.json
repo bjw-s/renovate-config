@@ -1,41 +1,43 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    ":semanticCommits"
-  ],
+  "extends": [":semanticCommits"],
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
       "semanticCommitType": "feat",
-      "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:"
+      "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:",
+      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
     },
     {
       "matchUpdateTypes": ["minor"],
-      "semanticCommitType": "feat"
+      "semanticCommitType": "feat",
+      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
     },
     {
       "matchUpdateTypes": ["patch"],
-      "semanticCommitType": "fix"
+      "semanticCommitType": "fix",
+      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "semanticCommitType": "chore",
+      "commitMessageExtra": "( {{currentDigestShort}} → {{newDigestShort}} )"
     },
     {
       "matchDatasources": ["docker"],
-      "semanticCommitScope": "docker-image"
+      "semanticCommitScope": "container"
     },
     {
       "matchDatasources": ["helm"],
-      "semanticCommitScope": "helm-chart"
+      "semanticCommitScope": "helm"
     },
     {
       "matchDatasources": ["terraform-provider"],
-      "semanticCommitScope": "terraform-provider"
+      "semanticCommitScope": "terraform"
     },
     {
-      "matchDatasources": ["galaxy-collection"],
-      "semanticCommitScope": "ansible-collection"
-    },
-    {
-      "matchDatasources": ["galaxy-role"],
-      "semanticCommitScope": "ansible-role"
+      "matchDatasources": ["galaxy", "galaxy-collection"],
+      "semanticCommitScope": "ansible"
     },
     {
       "matchManagers": ["github-actions"],

@@ -14,12 +14,32 @@
       "labels": ["type/patch"]
     },
     {
+      "matchUpdateTypes": ["digest"],
+      "labels": ["type/digest"]
+    },
+    {
       "matchDatasources": ["helm"],
       "addLabels": ["renovate/helm"]
     },
     {
       "matchDatasources": ["docker"],
       "addLabels": ["renovate/container"]
+    },
+    {
+      "matchDatasources": ["galaxy", "galaxy-collection"],
+      "addLabels": ["renovate/ansible"]
+    },
+    {
+      "matchDatasources": ["terraform-provider"],
+      "addLabels": ["renovate/terraform"]
+    },
+    {
+      "matchDatasources": ["github-releases", "github-tags"],
+      "addLabels": ["renovate/github-release"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "addLabels": ["renovate/github-action"]
     }
   ]
 }
