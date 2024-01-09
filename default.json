@@ -5,7 +5,6 @@
     ":dependencyDashboard",
     ":disableRateLimiting",
     "docker:enableMajor",
-    ":automergeDigest",
     ":enablePreCommit",
     "github>bjw-s/renovate-config:commit-message",
     "github>bjw-s/renovate-config:pr-labels",
