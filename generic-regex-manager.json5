@@ -9,7 +9,7 @@
         // Inline
         '\\S+: "?(?<currentValue>[^"\\s]+)"? # ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?',
         // Newline
-        '(?m:^\\s+# ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?\\n[ \\t ]*? \\S+: "?(?<currentValue>[^" ]+)"?$)',
+        '(?m:^\\s?# ?renovate: depName=(?<depName>\\S+)( datasource=(?<datasource>\\S+))?( versioning=(?<versioning>\\S+))?( extractVersion=(?<extractVersion>\\S+))?\\n[ \\t ]*?[[:graph:]]+: "?(?<currentValue>[^" ]+)"?$)',
         // Old style newline
         '(?m:^\\s+# ?renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?( versionTemplate=(?<extractVersion>\\S+))?\\n[ \\t ]*? \\S+: "?(?<currentValue>[^" ]+)"?$)',
       ],
