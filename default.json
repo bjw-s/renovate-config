@@ -2,10 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
+    "docker:enableMajor",
     ":dependencyDashboard",
     ":disableRateLimiting",
-    "docker:enableMajor",
     ":enablePreCommit",
+    ":separatePatchReleases",
     "github>bjw-s/renovate-config:automerge-github-actions",
     "github>bjw-s/renovate-config:commit-message",
     "github>bjw-s/renovate-config:pr-labels",
