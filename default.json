@@ -6,7 +6,6 @@
     ":dependencyDashboard",
     ":disableRateLimiting",
     ":enablePreCommit",
-    ":separatePatchReleases",
     "github>bjw-s/renovate-config:custom-managers.json5",
     "github>bjw-s/renovate-config:automerge-github-actions",
     "github>bjw-s/renovate-config:commit-message",
