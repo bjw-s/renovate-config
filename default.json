@@ -3,13 +3,14 @@
   "extends": [
     "config:recommended",
     "docker:enableMajor",
-    ":dependencyDashboard",
-    ":disableRateLimiting",
-    ":enablePreCommit",
+    "helpers:pinGitHubActionDigests",
     "github>bjw-s/renovate-config:custom-managers.json5",
     "github>bjw-s/renovate-config:automerge-github-actions",
     "github>bjw-s/renovate-config:commit-message",
-    "github>bjw-s/renovate-config:pr-labels"
+    "github>bjw-s/renovate-config:pr-labels",
+    ":dependencyDashboard",
+    ":disableRateLimiting",
+    ":enablePreCommit"
   ],
   "timezone": "Europe/Amsterdam",
   "dependencyDashboardTitle": "Renovate Dashboard",
