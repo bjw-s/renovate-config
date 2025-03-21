@@ -12,7 +12,10 @@
     {
       "description": "Automerge trusted actions sooner",
       "matchManagers": ["github-actions"],
-      "matchPackageNames": ["/^bjw-s-labs\//"],
+      "matchPackageNames": [
+        "/^bjw-s-labs\//",
+        "/^actions\//"
+      ],
       "automerge": true,
       "automergeType": "branch",
       "matchUpdateTypes": ["minor", "patch", "digest"],
