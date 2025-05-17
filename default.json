@@ -14,7 +14,10 @@
   ],
   "timezone": "Europe/Amsterdam",
   "dependencyDashboardTitle": "Renovate Dashboard",
-  "suppressNotifications": ["prIgnoreNotification"],
+  "suppressNotifications": [
+    "prEditedNotification",
+    "prIgnoreNotification"
+  ],
   "commitBodyTable": true,
   "rebaseWhen": "auto",
   "platformCommit": "enabled"
