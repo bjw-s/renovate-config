@@ -6,28 +6,28 @@
       "semanticCommitType": "feat",
       "commitMessageTopic": "{{depName}}",
       "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:",
-      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )",
+      "commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
       "commitMessageSuffix": ""
     },
     {
       "matchUpdateTypes": ["minor"],
       "semanticCommitType": "feat",
       "commitMessageTopic": "{{depName}}",
-      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )",
+      "commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
       "commitMessageSuffix": ""
     },
     {
       "matchUpdateTypes": ["patch"],
       "semanticCommitType": "fix",
       "commitMessageTopic": "{{depName}}",
-      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )",
+      "commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
       "commitMessageSuffix": ""
     },
     {
       "matchUpdateTypes": ["digest"],
       "semanticCommitType": "chore",
       "commitMessageTopic": "{{depName}}",
-      "commitMessageExtra": "( {{currentDigestShort}} → {{newDigestShort}} )",
+      "commitMessageExtra": "( {{currentDigestShort}} ➔ {{newDigestShort}} )",
       "commitMessageSuffix": ""
     },
     {
