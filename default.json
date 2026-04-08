@@ -8,6 +8,7 @@
     "github>bjw-s/renovate-config:commit-message",
     "github>bjw-s/renovate-config:pr-labels",
     ":dependencyDashboard",
+    ":automergePr",
     ":disableRateLimiting",
     ":enablePreCommit"
   ],
@@ -18,6 +19,5 @@
     "prIgnoreNotification"
   ],
   "commitBodyTable": true,
-  "rebaseWhen": "auto",
-  "platformCommit": "enabled"
+  "rebaseWhen": "auto"
 }
