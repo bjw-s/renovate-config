@@ -2,7 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "semanticCommitType": "feat",
       "commitMessageTopic": "{{depName}}",
       "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:",
@@ -10,36 +12,48 @@
       "commitMessageSuffix": ""
     },
     {
-      "matchUpdateTypes": ["minor"],
+      "matchUpdateTypes": [
+        "minor"
+      ],
       "semanticCommitType": "feat",
       "commitMessageTopic": "{{depName}}",
       "commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
       "commitMessageSuffix": ""
     },
     {
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "semanticCommitType": "fix",
       "commitMessageTopic": "{{depName}}",
       "commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
       "commitMessageSuffix": ""
     },
     {
-      "matchUpdateTypes": ["digest"],
+      "matchUpdateTypes": [
+        "digest"
+      ],
       "semanticCommitType": "chore",
       "commitMessageTopic": "{{depName}}",
       "commitMessageExtra": "( {{currentDigestShort}} ➔ {{newDigestShort}} )",
       "commitMessageSuffix": ""
     },
     {
-      "matchDatasources": ["docker"],
+      "matchDatasources": [
+        "docker"
+      ],
       "semanticCommitScope": "container"
     },
     {
-      "matchDatasources": ["helm"],
+      "matchDatasources": [
+        "helm"
+      ],
       "semanticCommitScope": "helm"
     },
     {
-      "matchManagers": ["github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
       "semanticCommitType": "ci",
       "semanticCommitScope": "github-action"
     }

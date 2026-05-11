@@ -2,44 +2,86 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchUpdateTypes": ["major"],
-      "labels": ["type/major"]
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "addLabels": [
+        "type/major"
+      ]
     },
     {
-      "matchUpdateTypes": ["minor"],
-      "labels": ["type/minor"]
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "addLabels": [
+        "type/minor"
+      ]
     },
     {
-      "matchUpdateTypes": ["patch"],
-      "labels": ["type/patch"]
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "addLabels": [
+        "type/patch"
+      ]
     },
     {
-      "matchUpdateTypes": ["digest"],
-      "labels": ["type/digest"]
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "addLabels": [
+        "type/digest"
+      ]
     },
     {
-      "matchDatasources": ["helm"],
-      "addLabels": ["renovate/helm"]
+      "matchDatasources": [
+        "helm"
+      ],
+      "addLabels": [
+        "renovate/helm"
+      ]
     },
     {
-      "matchDatasources": ["docker"],
-      "addLabels": ["renovate/container"]
+      "matchDatasources": [
+        "docker"
+      ],
+      "addLabels": [
+        "renovate/container"
+      ]
     },
     {
-      "matchDatasources": ["galaxy", "galaxy-collection"],
-      "addLabels": ["renovate/ansible"]
+      "matchDatasources": [
+        "galaxy",
+        "galaxy-collection"
+      ],
+      "addLabels": [
+        "renovate/ansible"
+      ]
     },
     {
-      "matchDatasources": ["terraform-provider"],
-      "addLabels": ["renovate/terraform"]
+      "matchDatasources": [
+        "terraform-provider"
+      ],
+      "addLabels": [
+        "renovate/terraform"
+      ]
     },
     {
-      "matchDatasources": ["github-releases", "github-tags"],
-      "addLabels": ["renovate/github-release"]
+      "matchDatasources": [
+        "github-releases",
+        "github-tags"
+      ],
+      "addLabels": [
+        "renovate/github-release"
+      ]
     },
     {
-      "matchManagers": ["github-actions"],
-      "addLabels": ["renovate/github-action"]
+      "matchManagers": [
+        "github-actions"
+      ],
+      "addLabels": [
+        "renovate/github-action"
+      ]
     }
   ]
 }
