@@ -2,32 +2,21 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "automerge": true,
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "minimumReleaseAge": "3 days",
-      "ignoreTests": true
-    },
-    {
-      "description": "Automerge trusted actions sooner",
+      "description": "Auto-merge trusted GitHub Actions",
       "matchManagers": [
         "github-actions"
       ],
       "matchPackageNames": [
-        "/^bjw-s-labs\//",
-        "/^actions\//"
+        "/^actions\\//",
+        "/^bjw-s-labs\//"
       ],
-      "automerge": true,
       "matchUpdateTypes": [
         "minor",
         "patch",
         "digest"
       ],
+      "automerge": true,
+      "automergeType": "branch",
       "minimumReleaseAge": "1 minute",
       "ignoreTests": true
     }
