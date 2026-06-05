@@ -3,14 +3,14 @@
   "extends": [
     "config:recommended",
     "docker:enableMajor",
-    "helpers:pinGitHubActionDigests",
-    "github>home-operations/renovate-presets//policies/semanticCommits.json5#1.3.1",
-    "github>home-operations/renovate-presets//managers/annotated.json5#1.3.1",
-    "local>bjw-s/renovate-config:pr-labels",
     ":dependencyDashboard",
     ":automergePr",
     ":disableRateLimiting",
-    ":enablePreCommit"
+    ":enablePreCommit",
+    "helpers:pinGitHubActionDigests",
+    "github>home-operations/renovate-presets//policies/semanticCommits.json5#1.3.1",
+    "github>home-operations/renovate-presets//managers/annotated.json5#1.3.1",
+    "local>bjw-s/renovate-config:pr-labels"
   ],
   "timezone": "Europe/Amsterdam",
   "dependencyDashboardTitle": "Renovate Dashboard",
