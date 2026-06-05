@@ -19,5 +19,10 @@
     "prIgnoreNotification"
   ],
   "commitBodyTable": true,
-  "rebaseWhen": "auto"
+  "rebaseWhen": "auto",
+  "renovate-config": {
+    "managerFilePatterns": [
+      "/\\.renovate\\/.*\\.json5?$/"
+    ]
+  }
 }
