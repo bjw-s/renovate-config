@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>bjw-s/renovate-config"
+  ],
+  "renovate-config": {
+    "managerFilePatterns": [
+      "/.json5?$/"
+    ]
+  }
+}
