@@ -8,8 +8,8 @@
     ":disableRateLimiting",
     ":enablePreCommit",
     "helpers:pinGitHubActionDigests",
-    "github>home-operations/renovate-presets//policies/semanticCommits.json5#3.0.0",
-    "github>home-operations/renovate-presets//managers/annotated.json5#3.0.0",
+    "github>home-operations/renovate-presets//policies/semanticCommits.json5#4.0.0",
+    "github>home-operations/renovate-presets//managers/annotated.json5#4.0.0",
     "local>bjw-s/renovate-config:pr-labels"
   ],
   "timezone": "Europe/Amsterdam",
