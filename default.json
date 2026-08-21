@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>home-operations/renovate-presets#8.0.0",
+    "github>home-operations/renovate-presets#8.1.0",
     "local>bjw-s/renovate-config:pr-labels",
     ":timezone(Europe/Amsterdam)"
   ],
