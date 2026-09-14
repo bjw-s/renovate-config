@@ -5,5 +5,7 @@
     "local>bjw-s/renovate-config:pr-labels",
     ":timezone(Europe/Amsterdam)"
   ],
-  "dependencyDashboardTitle": "Renovate Dashboard"
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "branchPrefix": "renovate-",
+  "branchPrefixOld": "renovate/"
 }
